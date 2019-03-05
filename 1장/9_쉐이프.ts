@@ -9,8 +9,8 @@ class Earth implements Planet{
 let planet: Planet;
 
 class Pluto{
-	name: string,
-	weather: string
+	name: string;
+	weather: string;
 }
 
 planet =  new Pluto();
