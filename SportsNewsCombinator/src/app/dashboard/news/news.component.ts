@@ -5,7 +5,7 @@ import { Article } from './../../../module/article';
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.scss']
+  styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
   latest_news: News = new News();

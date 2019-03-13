@@ -11,4 +11,4 @@ class Book{
 		return `${this.title} by ${this.author}`;
 	}
 }
-let typeScript = new Book('Sachin Ohri', 'TypeScript by Example', 300);
+let typeScript = new Book('TypeScript by Example', 'Sachin Ohri', 300);

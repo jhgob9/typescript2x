@@ -1,21 +1,17 @@
 thead {
-  color: #337AB7;
+    color: #337AB7;
 }
-
-.panel-primary {
+.panel-primary{
   border-color: #87396b;
 }
-
-.panel-heading {
+.panel-heading{
   background-color: #87396b;
   border-color: #87396b;
 }
-
 .item-block {
   display: block;
 }
-
-/*p {
+p {
   margin: 2px 0;
 }
 @media screen and (max-width: 768px) {
@@ -24,14 +20,17 @@ thead {
     margin-top: 0;
   }
 }
+
 a {
   cursor: pointer;
   text-decoration: none;
 }
+
 .title {
   font-size: 16px;
   font-family: Verdana, Geneva, sans-serif;
 }
+
 .subtext-laptop {
   font-size: 12px;
   font-weight: bold;
@@ -45,6 +44,7 @@ a {
     display: none;
   }
 }
+
 .subtext-palm {
   font-size: 13px;
   font-weight: bold;
@@ -64,11 +64,12 @@ a {
     display: none;
   }
 }
+
 .domain {
   color: #696969;
   letter-spacing: 0.5px;
 }
+
 .item-details {
   padding: 10px;
 }
-*/
