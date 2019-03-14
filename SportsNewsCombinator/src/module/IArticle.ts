@@ -4,6 +4,6 @@ export interface IArticle {
 	description: string;
 	url: string;
 	urlToImage: string;
-	publishedAt: string;
+	publishedAt: Date;
 	getFormattedDate(): string;
 }

@@ -5,7 +5,7 @@ export class Article implements IArticle {
 	description: string;
 	url: string;
 	urlToImage: string;
-	publishedAt: string;
+	publishedAt: Date;
 
 	getFormattedDate(): string {
 		const date = new Date(this.publishedAt);

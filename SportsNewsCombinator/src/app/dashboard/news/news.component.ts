@@ -4,8 +4,6 @@ import { News } from './../../../module/news';
 import { NewsapiService } from '../../service/newsapi.service';
 import { ActivatedRoute } from '@angular/router';
 
-import { Observable } from 'rxjs';
-
 @Component({
 	selector: 'app-news',
 	templateUrl: './news.component.html',
@@ -20,7 +18,6 @@ export class NewsComponent implements OnInit {
 	constructor(private _service: NewsapiService, private route: ActivatedRoute) { }
 
 	ngOnInit() {
-		// this.latest_news = this.seedNewsData();
 		this.route.data.subscribe(data => {
 			this.feedType = (data as any).feedType;
 			this.source = (data as any).source;
@@ -28,7 +25,7 @@ export class NewsComponent implements OnInit {
 		this._service.fetchNewsFeed(this.feedType)
 			.subscribe(
 				items => this.latest_news = items,
-				error => { this.errorMessage = 'Could not load ' + this.feedType + ' stories.'; console.log(this.errorMessage) }
+				error => { this.errorMessage = 'Could not load ' + this.feedType + ' stories.'; console.log(this.errorMessage); }
 			);
 	}
 
