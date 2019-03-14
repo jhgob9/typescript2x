@@ -5,7 +5,7 @@ export class Article implements IArticle {
 	description: string;
 	url: string;
 	urlToImage: string;
-	publishedAt: Date;
+	publishedAt: string;
 
 	getFormattedDate(): string {
 		const date = new Date(this.publishedAt);
@@ -20,7 +20,7 @@ export class Article implements IArticle {
 			month = '0' + month;
 		}
 		const finaldate = year + '-' + month + '-' + dt;
-		console.log(finaldate);
+		console.log(`날짜 ${finaldate}`);
 		return finaldate;
 	}
 }

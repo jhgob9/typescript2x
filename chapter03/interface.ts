@@ -3,8 +3,9 @@ interface IArticle{
 	author:string;
 	title:string;
 	discription:string;
-	// 선택적 프로퍼티
-	url?:string;
+	url:string;
+	urlToImage: string;
+	publishedAt: string;
 	// 메서드
 	getFormattedDate():string;
 }

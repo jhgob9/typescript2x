@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { News } from './../../../module/news';
-// import { Article } from './../../../module/article';
+import { Article } from './../../../module/article';
 import { NewsapiService } from '../../service/newsapi.service';
 import { ActivatedRoute } from '@angular/router';
 
