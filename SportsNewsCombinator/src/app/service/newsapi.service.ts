@@ -20,7 +20,7 @@ export class NewsapiService {
 	// 웹 서버에서 데이터를 가져오는 역할을 하는 메서드
 	public fetchNewsFeed(source: string): Observable < News > {
 		return this._http.get(`${this.baseUrl}/?source=${source}&sortBy=top&apiKey=${NewsapiService.apiKey}`).pipe(
-			map((response: Response) => <News> response),
+			map((response: Response) => response as unknown as News),
 			tap(data => console.log('All: ' + JSON.stringify(data))),
 			catchError(this.handleError)
 		);	}
