@@ -20,7 +20,7 @@ export class TaskComponent implements OnInit {
 	public onAddsubTask: EventEmitter<SubTask>;
 
 	boards: Board[];
-	board: Board = new Board();
+	board: Board = new Board;
 	editingtask = false;
 	addsubTaskText: string;
 	currentTitle: string;
@@ -29,7 +29,7 @@ export class TaskComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		const boardId = this._route.snapshot.params['id'];
+		const boardId = this._route.snapshot.params.id;
 		if (boardId != undefined) {
 			this.boards = this._boardService.Boards;
 			console.log(this.boards);

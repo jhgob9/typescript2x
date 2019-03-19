@@ -25,7 +25,7 @@ export class BoardComponent implements OnInit {
 	ngOnInit() {
 		const boardId = this._route.snapshot.params.id;
 		console.log(boardId);
-		this.board = this._trelloService.Boards.find(x => x.id === boardId);
+		this.board = this._trelloService.Boards.find(x => x.id == boardId);
 	}
 	addsubTask(event) {
 		console.log('Event Fired');
@@ -83,10 +83,10 @@ export class BoardComponent implements OnInit {
 	}
 	addtask() {
 		const newID = this.board.task.length + 1;
-		const newtask = <Task>{
+		const newtask = {
 			title: this.addtaskText,
 			id: newID
-		};
+		} as Task;
 		this.board.task.push(newtask);
 		this.addtaskText = '';
 

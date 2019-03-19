@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { Board } from '../model/board';
 import { Task } from '../model/task';
@@ -8,7 +8,7 @@ import { SubTask } from '../model/subtask';
 @Injectable()
 export class TrelloService {
 	public Boards: Board[];
-	constructor(private _http: HttpClient) { }
+	constructor(private _http: HttpClientModule) { }
 	public seedData() {
 		const temptask: Task = new Task();
 		const tempSubTask: SubTask = new SubTask();
@@ -31,7 +31,7 @@ export class TrelloService {
 
 		this.Boards = new Array();
 		this.Boards.push(board);
-
+		console.log(this.Boards);
 		return board;
 	}
 }
