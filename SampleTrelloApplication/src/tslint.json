@@ -14,6 +14,8 @@
       "kebab-case"
     ],
     "indent": [true, "tabs", 4],
-    "variable-name": false
+    "variable-name": false,
+    "triple-equals": false,
+    "deprecation": false
   }
 }

@@ -27,7 +27,7 @@ export class BoardComponent implements OnInit {
 		console.log(boardId);
 		this.board = this._trelloService.Boards.find(x => x.id == boardId);
 	}
-	addsubTask(event) {
+	addsubTask(event: any) {
 		console.log('Event Fired');
 		console.log(event);
 	}
@@ -39,7 +39,8 @@ export class BoardComponent implements OnInit {
 			.getElementsByClassName('board-title')[0]
 			.getElementsByTagName('input')[0];
 
-		setTimeout(function() { input.focus(); }, 0);
+		// setTimeout(function() { input.focus(); }, 0);
+		setTimeout(() => input.focus(), 0);
 	}
 
 	enableAddtask() {
@@ -47,7 +48,8 @@ export class BoardComponent implements OnInit {
 			.getElementsByClassName('add-task')[0]
 			.getElementsByTagName('input')[0];
 
-		setTimeout(function () { input.focus(); }, 0);
+		// setTimeout(function () { input.focus(); }, 0);
+		setTimeout(() => input.focus(), 0);
 
 	}
 	updateBoard() {
@@ -59,8 +61,7 @@ export class BoardComponent implements OnInit {
 	blurOnEnter(event) {
 		if (event.keyCode === 13) {
 			event.target.blur();
-		}
-		else if (event.keyCode === 27) {
+		} else if (event.keyCode === 27) {
 			this.board.title = this.currentTitle;
 			this.editingTitle = false;
 		}
@@ -73,8 +74,7 @@ export class BoardComponent implements OnInit {
 			} else {
 				this.clearAddtask();
 			}
-		}
-		else if (event.keyCode === 27) {
+		} else if (event.keyCode === 27) {
 			this.clearAddtask();
 		}
 	}
