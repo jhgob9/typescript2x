@@ -17,7 +17,10 @@ export class HomepageComponent implements OnInit {
 	constructor(private _trelloService: TrelloService) { }
 
 	ngOnInit() {
-		this.boards.push(this._trelloService.seedData());
+		// this.boards.push(this._trelloService.seedData());
+		this._trelloService.getBoardsWithPromises()
+			.then(boards => this.boards = boards,
+				error => this.errorMessage = error as any);
 	}
 
 	public addBoard() {

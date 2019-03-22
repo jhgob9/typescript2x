@@ -20,7 +20,7 @@ export class TaskComponent implements OnInit {
 	public onAddsubTask: EventEmitter<SubTask>;
 
 	boards: Board[];
-	board: Board = new Board;
+	board: Board = new Board();
 	editingtask = false;
 	addsubTaskText: string;
 	currentTitle: string;
@@ -39,7 +39,7 @@ export class TaskComponent implements OnInit {
 					break;
 				}
 			}
-		};
+		}
 	}
 
 	addtaskOnEnter(event: KeyboardEvent) {
@@ -52,9 +52,9 @@ export class TaskComponent implements OnInit {
 
 	addsubTask() {
 		this.subTasks = this.subTasks || [];
-		const newsubTask = <SubTask>{
+		const newsubTask = {
 			title: this.addsubTaskText
-		};
+		} as SubTask;
 		let selectedtask: Task;
 		for (const v of this.board.task) {
 			if (v.id == this.task.id) {
@@ -103,7 +103,7 @@ export class TaskComponent implements OnInit {
 			.getElementsByClassName('task-header')[0]
 			.getElementsByTagName('input')[0];
 
-		setTimeout(function () { input.focus(); }, 0);
+		setTimeout(() => input.focus(), 0);
 	}
 
 	enableAddsubTask() {
@@ -111,7 +111,7 @@ export class TaskComponent implements OnInit {
 			.getElementsByClassName('add-subTask')[0]
 			.getElementsByTagName('input')[0];
 
-		setTimeout(function () { input.focus(); }, 0);
+		setTimeout(() => input.focus(), 0);
 	}
 
 

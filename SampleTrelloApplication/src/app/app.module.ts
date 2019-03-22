@@ -11,6 +11,7 @@ import { BoardComponent } from './board/board.component';
 import { TrelloService } from './service/trello.service';
 import { TaskComponent } from './task/task.component';
 import { SubtaskComponent } from './subtask/subtask.component';
+import { CustomSort } from './shared/customsort_pipe';
 
 const appRoutes: Routes = [
 	{ path: 'board/:id', component: BoardComponent, pathMatch: 'full' },
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
 		HomepageComponent,
 		BoardComponent,
 		TaskComponent,
-		SubtaskComponent
+		SubtaskComponent,
+		CustomSort
 	],
 	imports: [
 		BrowserModule,

@@ -48,14 +48,11 @@ export class BoardComponent implements OnInit {
 			.getElementsByClassName('add-task')[0]
 			.getElementsByTagName('input')[0];
 
-		// setTimeout(function () { input.focus(); }, 0);
 		setTimeout(() => input.focus(), 0);
-
 	}
 	updateBoard() {
-
 		this.editingTitle = false;
-		document.title = this.board.title + ' | Generic Task Manager';
+		document.title = this.board.title + ' | 일반 작업 관리자';
 		this._trelloService.Boards.find(x => x.id == this.board.id).title = this.board.title;
 	}
 	blurOnEnter(event) {
@@ -89,7 +86,6 @@ export class BoardComponent implements OnInit {
 		} as Task;
 		this.board.task.push(newtask);
 		this.addtaskText = '';
-
 	}
 	updateBoardWidth() {
 		this.boardWidth = ((this.board.task.length + 1) * 280) + 10;
