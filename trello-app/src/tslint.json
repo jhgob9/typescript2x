@@ -1,0 +1,17 @@
+{
+  "extends": "../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "trello",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "trello",
+      "kebab-case"
+    ]
+  }
+}

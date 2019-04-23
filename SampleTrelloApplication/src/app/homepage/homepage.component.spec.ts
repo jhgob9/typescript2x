@@ -58,6 +58,6 @@ describe('HomepageComponent', () => {
 		const compiled = fixture.debugElement.nativeElement;
 		const title = compiled.querySelectorAll('.title');
 		expect(title.length).toBe(2);
-		expect(title[0].textContent).toContain('New Board');
+		expect(title[0].textContent).toContain('Board');
 	});
 });
